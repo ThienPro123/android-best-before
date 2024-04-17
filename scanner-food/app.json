@@ -1,0 +1,66 @@
+{
+    "expo": {
+        "name": "Best Before",
+        "slug": "bestbefore",
+        "version": "1.0.3",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "automatic",
+        "scheme": "com.hoanganh.bestbefore",
+        "splash": {
+            "image": "./assets/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "updates": {
+            "fallbackToCacheTimeout": 0
+        },
+        "assetBundlePatterns": ["**/*"],
+        "android": {
+            "googleServicesFile": "./google-services.json",
+            "package": "com.hoanganh.bestbefore",
+            "versionCode": 1,
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/adaptive-icon.png",
+                "backgroundColor": "#ffffff"
+            },
+            "icon": "./assets/notification-icon.png",
+            "useNextNotificationsApi": false
+        },
+        "ios": {
+            "supportsTablet": true,
+            "infoPlist": {
+                "UIBackgroundModes": "remote-notification"
+            },
+            "bundleIdentifier": "com.hoanganh.bestbefore"
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        },
+        "notification": {
+            "icon": "./assets/notification-icon.png",
+            "color": "#ffffff",
+            "androidMode": "default",
+            "androidCollapsedTitle": "Best Before",
+            "iosDisplayInForeground": true
+        },
+        "plugins": [
+            [
+                "expo-notifications",
+                {
+                    "icon": "./assets/notification-icon.png",
+                    "color": "#ffffff",
+                    "androidCollapsedTitle": "Best Before",
+                    "androidMode": "default",
+                    "sounds": [],
+                    "iosDisplayInForeground": true
+                }
+            ]
+        ],
+        "extra": {
+            "eas": {
+                "projectId": "8b7b8bc2-4b5a-414e-bde7-ead85c20393a"
+            }
+        }
+    }
+}

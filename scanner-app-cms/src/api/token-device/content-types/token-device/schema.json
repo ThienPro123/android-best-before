@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "token_devices",
+  "info": {
+    "singularName": "token-device",
+    "pluralName": "token-devices",
+    "displayName": "Token_Device",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "token": {
+      "type": "text"
+    },
+    "userId": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "scanner-app-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-documentation": "4.5.2",
+    "@strapi/plugin-i18n": "4.5.2",
+    "@strapi/plugin-users-permissions": "4.5.2",
+    "@strapi/provider-email-nodemailer": "^4.5.2",
+    "@strapi/provider-upload-cloudinary": "^4.5.2",
+    "@strapi/strapi": "4.5.2",
+    "@strapi/utils": "^4.5.2",
+    "better-sqlite3": "7.4.6",
+    "cloudinary": "^1.32.0",
+    "expo-server-sdk": "^3.7.0",
+    "pg": "^8.8.0",
+    "pg-connection-string": "^2.5.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "16248f75-92b9-4c7b-8f5a-adac0e964ade"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
