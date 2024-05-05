@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    baseURL: "https://scanner-app-cms.up.railway.app/api/",
+    baseURL: "https://d4ba-171-224-178-242.ngrok-free.app/api/",
     headers: {
         "X-Requested-With": "XMLHttpRequest",
         "Content-Type": "application/json",
