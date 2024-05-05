@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { format } from "date-fns";
+import { format, isBefore } from "date-fns";
 
 import { globalStyles } from "../styles/global";
 import { LABELS } from "../constants/label";
@@ -14,6 +14,8 @@ class ListItem extends React.Component {
     }
 
     render() {
+        const purchaseDate =  new Date(this.props.item.purchaseDate)
+        const currentDate = new Date()
         return (
             <View style={styles.item}>
                 <View style={styles.itemContainer}>
@@ -45,10 +47,10 @@ class ListItem extends React.Component {
                                 }}
                             />
                         </TouchableOpacity>
-                        <Text style={globalStyles.itemListRating}>
+                        <Text style={{...globalStyles.itemListRating, color: isBefore(purchaseDate, currentDate) ? 'red' : '#888'}}>
                             Time expiry:{" "}
                             {format(
-                                new Date(this.props.item.purchaseDate),
+                                purchaseDate,
                                 "dd/MM/yyyy"
                             )}{" "}
                             {" - "}

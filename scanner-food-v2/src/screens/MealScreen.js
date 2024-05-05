@@ -13,16 +13,18 @@ function MealScreen() {
         try {
             const { data } = await axiosClient.get("/meals?populate=image");
 
-            const _meals = data.data.map((item) => ({
-                id: item.id,
-                title: item.attributes.titlle,
-                name: item.attributes.name,
-                image: item.attributes.image.data.attributes.formats.large.url,
-                cals: item.attributes.cals,
-                direction: item.attributes.direction,
-                timeCook: item.attributes.timeCook,
-                ingredients: item.attributes.ingredients,
-            }));
+            const _meals = data.data.map((item) => {
+                return ({
+                    id: item.id,
+                    title: item.attributes.titlle,
+                    name: item.attributes.name,
+                    image: item.attributes.image.data.attributes.url,
+                    cals: item.attributes.cals,
+                    direction: item.attributes.direction,
+                    timeCook: item.attributes.timeCook,
+                    ingredients: item.attributes.ingredients,
+                })
+            });
 
             setMeals(_meals);
         } catch (error) {
