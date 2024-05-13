@@ -15,6 +15,7 @@ class ListItem extends React.Component {
 
     render() {
         const purchaseDate =  new Date(this.props.item.purchaseDate)
+        const expireDate = new Date(this.props.item.expireDate)
         const currentDate = new Date()
         return (
             <View style={styles.item}>
@@ -47,7 +48,7 @@ class ListItem extends React.Component {
                                 }}
                             />
                         </TouchableOpacity>
-                        <Text style={{...globalStyles.itemListRating, color: isBefore(purchaseDate, currentDate) ? 'red' : '#888'}}>
+                        <Text style={{...globalStyles.itemListRating, color: isBefore(expireDate, currentDate) ? 'red' : '#888'}}>
                             Time expiry:{" "}
                             {format(
                                 purchaseDate,
@@ -55,7 +56,7 @@ class ListItem extends React.Component {
                             )}{" "}
                             {" - "}
                             {format(
-                                new Date(this.props.item.expireDate),
+                               expireDate,
                                 "dd/MM/yyyy"
                             )}
                         </Text>
